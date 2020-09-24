@@ -1,0 +1,2 @@
+bind_address = ":8080" # Server is avaliable at localhost:<bind_address>
+log_level = "debug" # Logrus logs level (debug for all messages | error for prod)
