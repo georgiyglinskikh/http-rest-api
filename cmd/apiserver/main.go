@@ -2,10 +2,10 @@ package main
 
 import (
 	"flag" // Parse cli flags
-	"log"  // Log server initileasing and stopping
+	"log"  // Log server initialising and stopping
 
-	"github.com/BurntSushi/toml"                                                // Parse toml
-	apiserver "github.com/georgiyglinskikh/http-rest-api/iternal/app/apiserver" // Iternal logic
+	"github.com/BurntSushi/toml"                                       // Parse toml
+	"github.com/georgiyglinskikh/http-rest-api/internal/app/apiserver" // Internal logic
 )
 
 var (
@@ -18,7 +18,7 @@ func init() {
 	flag.StringVar(&configPath, "config-path", "configs/apiserver.toml", "path to config file")
 }
 
-// main Entery point for program
+// main Entry point for program
 func main() {
 	flag.Parse()
 

@@ -1,7 +1,7 @@
 package apiserver
 
 import (
-	"io"       // Read | write strings throu web and to files
+	"io"       // Read | write strings through web and to files
 	"net/http" // Work with http
 
 	"github.com/gorilla/mux"     // Route library
@@ -49,7 +49,7 @@ func (server *APIServer) configureLogger() error {
 		return err
 	}
 
-	// and interpretate it
+	// and set it
 	server.Logger.SetLevel(level)
 
 	return nil // Exit successfully
@@ -63,7 +63,7 @@ func (server *APIServer) configureRouter() {
 
 // Router function that work with `/hello` address
 func (server *APIServer) handleHello() http.HandlerFunc {
-	return func(responce http.ResponseWriter, request *http.Request) {
-		io.WriteString(responce, "Hello") // Send string back
+	return func(response http.ResponseWriter, request *http.Request) {
+		_, _ = io.WriteString(response, "Hello") // Send string back
 	}
 }

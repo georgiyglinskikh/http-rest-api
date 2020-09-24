@@ -1,10 +1,10 @@
 # http-rest-api
 
-Simple rest api application for learnining purposes
+Simple rest api application for learning purposes
 
 It's written entirely in `GO`
 
-## Presequanties
+## Preservatives
 
 - github.com/BurntSushi/toml = Parse toml with ease
 - github.com/gorilla/mux = Library for routing

@@ -10,8 +10,8 @@ import (
 
 func TestAPIServer_HandleHello(t *testing.T) {
 	server := New(NewConfig())                                   // Create server
-	responce := httptest.NewRecorder()                           // Listen to server output
+	response := httptest.NewRecorder()                           // Listen to server output
 	request, _ := http.NewRequest(http.MethodGet, "/hello", nil) // Send request
-	server.handleHello().ServeHTTP(responce, request)            // Send request for reading responce
-	assert.Equal(t, responce.Body.String(), "Hello")             // Test if responce matches expected string
+	server.handleHello().ServeHTTP(response, request)            // Send request for reading response
+	assert.Equal(t, response.Body.String(), "Hello")             // Test if response matches expected string
 }
