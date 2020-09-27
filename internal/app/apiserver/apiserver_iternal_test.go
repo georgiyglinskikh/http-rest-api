@@ -9,7 +9,7 @@ import (
 )
 
 func TestAPIServer_HandleHello(t *testing.T) {
-	server := New(NewConfig())                                   // Create server
+	server := NewAPIServer(DefaultConfig())                      // Create server
 	response := httptest.NewRecorder()                           // Listen to server output
 	request, _ := http.NewRequest(http.MethodGet, "/hello", nil) // Send request
 	server.handleHello().ServeHTTP(response, request)            // Send request for reading response
